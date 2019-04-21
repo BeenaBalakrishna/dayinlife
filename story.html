@@ -13188,6 +13188,13 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2><center>Group 6</center></h2>
+<h2><center>Beena, Pranay, Sarvani, Smrithi</center></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>It is a well-known fact that a complete rotation of the planet Earth takes 24 hours causing the formation of day and night. The fascinating part is to analyze how the people in the world decide to spend the available precious 24 hours. The demographics plays a very vital role on analysing and understanding the life-style of people mainly due to the influence of the time-zone, culture, population, socio-economy factors, current trend, etc. In this article, we focus on visually studying the behaviour of person living in the United States for the most obvious reasons that the country comprises of diverse, multi-cultural and a democratic-republic population.</p>
 <p>To go another step ahead, this article shows how an American spends his/her day which is classified into a number of activities like Personal Care, Travelling, Socialising-Leisure time, Religion, Work, Sports- Fitness and so on.</p>
 
@@ -13298,10 +13305,12 @@ div#notebook {
 
 <span class="n">cax</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">ColorAxis</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">cscale</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Time(minutes)&#39;</span><span class="p">)</span>
 <span class="n">fig_map</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">marks</span><span class="o">=</span><span class="p">[</span><span class="n">states_map</span><span class="p">],</span><span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">cax</span><span class="p">],</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Average Working Time&#39;</span><span class="p">,</span>
-                   <span class="n">layout</span><span class="o">=</span><span class="n">Layout</span><span class="p">(</span><span class="n">min_width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">),</span>
-                   <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">},)</span>
+                   <span class="n">layout</span><span class="o">=</span><span class="n">Layout</span><span class="p">(</span><span class="n">min_width</span><span class="o">=</span><span class="s1">&#39;800px&#39;</span><span class="p">,</span> <span class="n">min_height</span><span class="o">=</span><span class="s1">&#39;800px&#39;</span><span class="p">),</span>
+                   <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">},</span>
+                   <span class="n">title_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;font-size&#39;</span><span class="p">:</span> <span class="s1">&#39;20px&#39;</span><span class="p">,</span> <span class="s1">&#39;text-transform&#39;</span><span class="p">:</span> <span class="s1">&#39;uppercase&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;font-weight&#39;</span><span class="p">:</span> <span class="s1">&#39;700&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#13294a&#39;</span><span class="p">},)</span>
 <span class="n">fig_map</span><span class="o">.</span><span class="n">fig_margin</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;bottom&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
-<span class="c1"># fig_map.aspect_ratio = 1920/1080</span>
+<span class="n">fig_map</span><span class="o">.</span><span class="n">aspect_ratio</span> <span class="o">=</span> <span class="mi">1920</span><span class="o">/</span><span class="mi">1080</span>
 
 <span class="c1">###########################################################</span>
 
@@ -13321,7 +13330,7 @@ div#notebook {
 <span class="n">bars_hist</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Bars</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">scales</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">sc_x2</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">sc_y2</span><span class="p">},</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#13294a&#39;</span><span class="p">])</span>
 <span class="c1">#           ,width=bins[1]-bins[0]  , edgecolor=&#39;black&#39;)</span>
 <span class="n">fig_bar1</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">marks</span> <span class="o">=</span> <span class="p">[</span><span class="n">bars_hist</span><span class="p">],</span><span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">ax_x2</span><span class="p">,</span> <span class="n">ax_y2</span><span class="p">],</span> <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">})</span>
-<span class="n">fig_bar1</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">max_width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="s1">&#39;60%&#39;</span><span class="p">)</span>
+<span class="n">fig_bar1</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">max_width</span><span class="o">=</span><span class="s1">&#39;99%&#39;</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="s1">&#39;60%&#39;</span><span class="p">)</span>
 <span class="c1">#fig_bar1.fig_margin = {&#39;bottom&#39;:50, &#39;top&#39;:50, &#39;left&#39;:20, &#39;right&#39;:10}</span>
 
 <span class="c1">###########################################################</span>
@@ -13346,7 +13355,7 @@ div#notebook {
 <span class="n">fig_line</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">marks</span> <span class="o">=</span> <span class="p">[</span><span class="n">lines</span><span class="p">],</span> <span class="n">axes</span> <span class="o">=</span> <span class="p">[</span><span class="n">x_ax_line</span><span class="p">,</span> <span class="n">y_ax_line</span><span class="p">],</span> 
                     <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Average Working Time across US&#39;</span><span class="p">,</span> 
                     <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">})</span>
-<span class="n">fig_line</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">max_width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="s1">&#39;60%&#39;</span><span class="p">)</span>
+<span class="n">fig_line</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">max_width</span><span class="o">=</span><span class="s1">&#39;99%&#39;</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="s1">&#39;60%&#39;</span><span class="p">)</span>
 
 <span class="c1">###########################################################</span>
 
@@ -13422,6 +13431,27 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+</div>
+</div>
+
   </div>
 
   
@@ -13438,6 +13468,27 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
 </div>
 </div>
 
@@ -13543,7 +13594,7 @@ div#notebook {
                      <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">},</span>
                      <span class="n">layout</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;flex&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">},</span>
                      <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;States that work the longest hours and comparison of gender work gap&#39;</span><span class="p">,</span>
-                     <span class="n">title_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;font-family&#39;</span><span class="p">:</span> <span class="s1">&#39;Montserrat&#39;</span><span class="p">,</span> <span class="s1">&#39;font-size&#39;</span><span class="p">:</span> <span class="s1">&#39;20px&#39;</span><span class="p">,</span> <span class="s1">&#39;text-transform&#39;</span><span class="p">:</span> <span class="s1">&#39;uppercase&#39;</span><span class="p">,</span>
+                     <span class="n">title_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;font-size&#39;</span><span class="p">:</span> <span class="s1">&#39;20px&#39;</span><span class="p">,</span> <span class="s1">&#39;text-transform&#39;</span><span class="p">:</span> <span class="s1">&#39;uppercase&#39;</span><span class="p">,</span>
                                     <span class="s1">&#39;font-weight&#39;</span><span class="p">:</span> <span class="s1">&#39;700&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#13294a&#39;</span><span class="p">})</span>
 </pre></div>
 
@@ -13567,6 +13618,27 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
 </div>
 </div>
 

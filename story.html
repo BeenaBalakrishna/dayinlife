@@ -13287,7 +13287,7 @@ div#notebook {
                    <span class="c1"># reverse the colorscale or Hawaii is not visible</span>
 
 <span class="n">map_tt</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;State&#39;</span><span class="p">,</span> <span class="s1">&#39;Time (minutes)&#39;</span><span class="p">],</span> <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">])</span>
-<span class="n">sc_geo</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">AlbersUSA</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">2400</span><span class="p">)</span>
+<span class="n">sc_geo</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">AlbersUSA</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">2700</span><span class="p">)</span>
 <span class="n">states_map</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="n">work_statewise</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(),</span> 
                      <span class="n">map_data</span><span class="o">=</span><span class="n">bq</span><span class="o">.</span><span class="n">topo_load</span><span class="p">(</span><span class="s1">&#39;map_data/USStatesMap.json&#39;</span><span class="p">),</span>
                     <span class="n">scales</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span><span class="n">sc_geo</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">cscale</span><span class="p">},</span><span class="n">tooltip</span> <span class="o">=</span> <span class="n">map_tt</span><span class="p">,</span>
@@ -13298,10 +13298,10 @@ div#notebook {
 
 <span class="n">cax</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">ColorAxis</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">cscale</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Time(minutes)&#39;</span><span class="p">)</span>
 <span class="n">fig_map</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">marks</span><span class="o">=</span><span class="p">[</span><span class="n">states_map</span><span class="p">],</span><span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">cax</span><span class="p">],</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Average Working Time&#39;</span><span class="p">,</span>
-                   <span class="n">layout</span><span class="o">=</span><span class="n">Layout</span><span class="p">(</span><span class="n">min_width</span><span class="o">=</span><span class="s1">&#39;800px&#39;</span><span class="p">,</span> <span class="n">min_height</span><span class="o">=</span><span class="s1">&#39;800px&#39;</span><span class="p">),</span>
+                   <span class="n">layout</span><span class="o">=</span><span class="n">Layout</span><span class="p">(</span><span class="n">min_width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">),</span>
                    <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">},)</span>
-<span class="n">fig_map</span><span class="o">.</span><span class="n">fig_margin</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;bottom&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
-<span class="n">fig_map</span><span class="o">.</span><span class="n">aspect_ratio</span> <span class="o">=</span> <span class="mi">1920</span><span class="o">/</span><span class="mi">1080</span>
+<span class="n">fig_map</span><span class="o">.</span><span class="n">fig_margin</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;bottom&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="c1"># fig_map.aspect_ratio = 1920/1080</span>
 
 <span class="c1">###########################################################</span>
 
@@ -13422,27 +13422,6 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    
-
-
-
-  <div class="output_subarea output_widget_view ">
-    <button class="js-nbinteract-widget">
-      Loading widgets...
-    </button>
-  </div>
-
-</div>
-
-</div>
-</div>
-
   </div>
 
   
@@ -13459,27 +13438,6 @@ div#notebook {
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    
-
-
-
-  <div class="output_subarea output_widget_view ">
-    <button class="js-nbinteract-widget">
-      Loading widgets...
-    </button>
-  </div>
-
-</div>
-
 </div>
 </div>
 
@@ -13609,27 +13567,6 @@ div#notebook {
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    
-
-
-
-  <div class="output_subarea output_widget_view ">
-    <button class="js-nbinteract-widget">
-      Loading widgets...
-    </button>
-  </div>
-
-</div>
-
 </div>
 </div>
 

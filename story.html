@@ -13107,15 +13107,15 @@ div#notebook {
 
 <style>
 		.container {
-			width: 77%;
+			width: 75%;
 		}
         .cell.nbinteract-left {
-            width: 75%;
+            width: 65%;
             float: left;
         }
 
         .cell.nbinteract-right {
-            width: 25%;
+            width: 35%;
             float: right;
         }
 		
@@ -13287,7 +13287,7 @@ div#notebook {
                    <span class="c1"># reverse the colorscale or Hawaii is not visible</span>
 
 <span class="n">map_tt</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;State&#39;</span><span class="p">,</span> <span class="s1">&#39;Time (minutes)&#39;</span><span class="p">],</span> <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">])</span>
-<span class="n">sc_geo</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">AlbersUSA</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">2700</span><span class="p">)</span>
+<span class="n">sc_geo</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">AlbersUSA</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">2400</span><span class="p">)</span>
 <span class="n">states_map</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="n">work_statewise</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(),</span> 
                      <span class="n">map_data</span><span class="o">=</span><span class="n">bq</span><span class="o">.</span><span class="n">topo_load</span><span class="p">(</span><span class="s1">&#39;map_data/USStatesMap.json&#39;</span><span class="p">),</span>
                     <span class="n">scales</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span><span class="n">sc_geo</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">cscale</span><span class="p">},</span><span class="n">tooltip</span> <span class="o">=</span> <span class="n">map_tt</span><span class="p">,</span>
@@ -13299,9 +13299,7 @@ div#notebook {
 <span class="n">cax</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">ColorAxis</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">cscale</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Time(minutes)&#39;</span><span class="p">)</span>
 <span class="n">fig_map</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">marks</span><span class="o">=</span><span class="p">[</span><span class="n">states_map</span><span class="p">],</span><span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">cax</span><span class="p">],</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Average Working Time&#39;</span><span class="p">,</span>
                    <span class="n">layout</span><span class="o">=</span><span class="n">Layout</span><span class="p">(</span><span class="n">min_width</span><span class="o">=</span><span class="s1">&#39;800px&#39;</span><span class="p">,</span> <span class="n">min_height</span><span class="o">=</span><span class="s1">&#39;800px&#39;</span><span class="p">),</span>
-                   <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">},</span>
-                    <span class="n">title_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;font-family&#39;</span><span class="p">:</span> <span class="s1">&#39;Montserrat&#39;</span><span class="p">,</span> <span class="s1">&#39;font-size&#39;</span><span class="p">:</span> <span class="s1">&#39;30px&#39;</span><span class="p">,</span>
-                                  <span class="s1">&#39;text-transform&#39;</span><span class="p">:</span> <span class="s1">&#39;uppercase&#39;</span><span class="p">,</span> <span class="s1">&#39;font-weight&#39;</span><span class="p">:</span> <span class="s1">&#39;700&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#13294a&#39;</span><span class="p">},)</span>
+                   <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">},)</span>
 <span class="n">fig_map</span><span class="o">.</span><span class="n">fig_margin</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;bottom&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
 <span class="n">fig_map</span><span class="o">.</span><span class="n">aspect_ratio</span> <span class="o">=</span> <span class="mi">1920</span><span class="o">/</span><span class="mi">1080</span>
 
@@ -13323,7 +13321,7 @@ div#notebook {
 <span class="n">bars_hist</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Bars</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">scales</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">sc_x2</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">sc_y2</span><span class="p">},</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#13294a&#39;</span><span class="p">])</span>
 <span class="c1">#           ,width=bins[1]-bins[0]  , edgecolor=&#39;black&#39;)</span>
 <span class="n">fig_bar1</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">marks</span> <span class="o">=</span> <span class="p">[</span><span class="n">bars_hist</span><span class="p">],</span><span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">ax_x2</span><span class="p">,</span> <span class="n">ax_y2</span><span class="p">],</span> <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">})</span>
-<span class="n">fig_bar1</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">max_width</span><span class="o">=</span><span class="s1">&#39;350px&#39;</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="s1">&#39;350px&#39;</span><span class="p">)</span>
+<span class="n">fig_bar1</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">max_width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="s1">&#39;60%&#39;</span><span class="p">)</span>
 <span class="c1">#fig_bar1.fig_margin = {&#39;bottom&#39;:50, &#39;top&#39;:50, &#39;left&#39;:20, &#39;right&#39;:10}</span>
 
 <span class="c1">###########################################################</span>
@@ -13347,8 +13345,8 @@ div#notebook {
 
 <span class="n">fig_line</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">marks</span> <span class="o">=</span> <span class="p">[</span><span class="n">lines</span><span class="p">],</span> <span class="n">axes</span> <span class="o">=</span> <span class="p">[</span><span class="n">x_ax_line</span><span class="p">,</span> <span class="n">y_ax_line</span><span class="p">],</span> 
                     <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Average Working Time across US&#39;</span><span class="p">,</span> 
-                     <span class="n">title_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;font-family&#39;</span><span class="p">:</span> <span class="s1">&#39;Montserrat&#39;</span><span class="p">},</span> <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">})</span>
-<span class="n">fig_line</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">max_width</span><span class="o">=</span><span class="s1">&#39;350px&#39;</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="s1">&#39;350px&#39;</span><span class="p">)</span>
+                    <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">})</span>
+<span class="n">fig_line</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">max_width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="s1">&#39;60%&#39;</span><span class="p">)</span>
 
 <span class="c1">###########################################################</span>
 
@@ -13582,9 +13580,10 @@ div#notebook {
                         <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#FC0F3A&#39;</span><span class="p">],</span> <span class="n">stroke_width</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="n">display_legend</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
                         <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Female&#39;</span><span class="p">])</span>
 
+
 <span class="n">fig_bar2</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">marks</span> <span class="o">=</span> <span class="p">[</span><span class="n">bars_topwork</span><span class="p">,</span> <span class="n">lines_male</span><span class="p">,</span> <span class="n">lines_female</span><span class="p">],</span> <span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">ax_x3</span><span class="p">,</span> <span class="n">ax_y3</span><span class="p">],</span> 
                      <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">},</span>
-                     <span class="n">layout</span><span class="o">=</span><span class="n">Layout</span><span class="p">(</span><span class="n">min_width</span><span class="o">=</span><span class="s1">&#39;900px&#39;</span><span class="p">,</span> <span class="n">min_height</span><span class="o">=</span><span class="s1">&#39;550px&#39;</span><span class="p">),</span>
+                     <span class="n">layout</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;flex&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">},</span>
                      <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;States that work the longest hours and comparison of gender work gap&#39;</span><span class="p">,</span>
                      <span class="n">title_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;font-family&#39;</span><span class="p">:</span> <span class="s1">&#39;Montserrat&#39;</span><span class="p">,</span> <span class="s1">&#39;font-size&#39;</span><span class="p">:</span> <span class="s1">&#39;20px&#39;</span><span class="p">,</span> <span class="s1">&#39;text-transform&#39;</span><span class="p">:</span> <span class="s1">&#39;uppercase&#39;</span><span class="p">,</span>
                                     <span class="s1">&#39;font-weight&#39;</span><span class="p">:</span> <span class="s1">&#39;700&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#13294a&#39;</span><span class="p">})</span>
@@ -13605,7 +13604,8 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
-<span class="n">fig_bar2</span>
+<span class="n">bar2box</span> <span class="o">=</span> <span class="n">ipywidgets</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span><span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">fig_bar2</span><span class="p">],</span> <span class="n">layout</span><span class="o">=</span><span class="n">Layout</span><span class="p">(</span><span class="n">display</span><span class="o">=</span><span class="s1">&#39;flex&#39;</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">))</span>
+<span class="n">bar2box</span>
 </pre></div>
 
     </div>

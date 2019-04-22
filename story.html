@@ -13290,7 +13290,7 @@ div#notebook {
 
 
 <span class="c1">######################### Map ############################</span>
-<span class="n">cscale</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">ColorScale</span><span class="p">(</span><span class="n">scheme</span> <span class="o">=</span> <span class="s1">&#39;Oranges&#39;</span><span class="p">)</span>        
+<span class="n">cscale</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">ColorScale</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;Oranges&#39;</span><span class="p">)</span>        
                    <span class="c1"># reverse the colorscale or Hawaii is not visible</span>
 
 <span class="n">map_tt</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;State&#39;</span><span class="p">,</span> <span class="s1">&#39;Time (minutes)&#39;</span><span class="p">],</span> <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">])</span>

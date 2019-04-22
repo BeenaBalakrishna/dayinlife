@@ -13188,15 +13188,20 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2><center>Group 6</center></h2>
-<h2><center>Beena, Pranay, Sarvani, Smrithi</center></h2>
+<center> 
+<address> 
+Beena Balakrishna, Pranay Parmar, Sarvani Putta and Smriiti Singhal<br>
+The School of Information Sciences,<br>
+University of Illinois - Urbana Champaign<br>
+</address>
+</center>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is a well-known fact that a complete rotation of the planet Earth takes 24 hours causing the formation of day and night. The fascinating part is to analyze how the people in the world decide to spend the available precious 24 hours. The demographics plays a very vital role on analysing and understanding the life-style of people mainly due to the influence of the time-zone, culture, population, socio-economy factors, current trend, etc. In this article, we focus on visually studying the behaviour of person living in the United States for the most obvious reasons that the country comprises of diverse, multi-cultural and a democratic-republic population.</p>
-<p>To go another step ahead, this article shows how an American spends his/her day which is classified into a number of activities like Personal Care, Travelling, Socialising-Leisure time, Religion, Work, Sports- Fitness and so on.</p>
+<p>It is an interesting question to see how people spend the available 24 hours across the United States. Demographics and other factors such as time-zone, culture, population, socio-economic factors play a vital role in determining the life-style of people. This article examines the behaviour of person living in the United States.</p>
+<p>Using data from the American Time Use Survey (ATUS) [1], it is possible to uncover patterns in time utilization of people across the United States. For instance, the dashboard below depicts how much time people spend in various activity categories across states and the distribution.</p>
 
 </div>
 </div>
@@ -13329,7 +13334,7 @@ div#notebook {
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">normalized_hist</span><span class="p">(</span><span class="n">time_spent</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
 <span class="n">bars_hist</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Bars</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">scales</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">sc_x2</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">sc_y2</span><span class="p">},</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#13294a&#39;</span><span class="p">])</span>
 <span class="c1">#           ,width=bins[1]-bins[0]  , edgecolor=&#39;black&#39;)</span>
-<span class="n">fig_bar1</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">marks</span> <span class="o">=</span> <span class="p">[</span><span class="n">bars_hist</span><span class="p">],</span><span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">ax_x2</span><span class="p">,</span> <span class="n">ax_y2</span><span class="p">],</span> <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">})</span>
+<span class="n">fig_bar1</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">marks</span> <span class="o">=</span> <span class="p">[</span><span class="n">bars_hist</span><span class="p">],</span><span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">ax_x2</span><span class="p">,</span> <span class="n">ax_y2</span><span class="p">],</span> <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">},</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Population Distribution of Time Spent&#39;</span><span class="p">)</span>
 <span class="n">fig_bar1</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">max_width</span><span class="o">=</span><span class="s1">&#39;99%&#39;</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="s1">&#39;60%&#39;</span><span class="p">)</span>
 <span class="c1">#fig_bar1.fig_margin = {&#39;bottom&#39;:50, &#39;top&#39;:50, &#39;left&#39;:20, &#39;right&#39;:10}</span>
 
@@ -13399,6 +13404,13 @@ div#notebook {
     <span class="n">lines</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">age_wise_act_sum</span> <span class="o">/</span> <span class="n">age_wise_count</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
     <span class="n">lines</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">ats_sum</span><span class="p">[</span><span class="s1">&#39;TEAGE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
     <span class="n">fig_line</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">act_dd</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="s1">&#39; across US&#39;</span>
+    <span class="n">selected_fips</span> <span class="o">=</span> <span class="n">states_map</span><span class="o">.</span><span class="n">selected</span> <span class="ow">or</span> <span class="n">merged</span><span class="o">.</span><span class="n">GESTFIPS</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">normalized_hist</span><span class="p">(</span><span class="n">merged</span>
+                            <span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">merged</span><span class="o">.</span><span class="n">GESTFIPS</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="n">selected_fips</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]),</span> <span class="p">[</span><span class="s1">&#39;TUCASEID&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">columns</span><span class="p">]</span>
+                            <span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;TUCASEID&#39;</span><span class="p">)</span>
+                            <span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+    <span class="n">bars_hist</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="n">bars_hist</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
     
 <span class="c1"># Observe above changes </span>
 <span class="n">act_dd</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">on_activity_change</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
@@ -13495,7 +13507,38 @@ div#notebook {
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Top-states-that-work-the-longest-hours">Top states that work the longest hours<a class="anchor-link" href="#Top-states-that-work-the-longest-hours">&#182;</a></h2><h4 id="Considering-only-people-who-are-employed">Considering only people who are employed<a class="anchor-link" href="#Considering-only-people-who-are-employed">&#182;</a></h4>
+<p>Let’s take a closer look into the statistics of 7 specific activities and visualise how it affects the lifestyle of people of certain states.</p>
+<ol>
+<li><em>Work</em>: 
+It is surprising that the people from South Dakota are the real hard worker as they spend an average of 301.7 minutes on work- and work-related activities. Whereas the people from the states like California and New York who are expected to spend most of their time working as the Bay area and east-coast region are referred as the IT and corporate hub but turns out that these people are smart-workers and allot their time wisely.</li>
+<li><em>Travel</em>: 
+In the current day situation, commuting from one place takes a large portion of the day and seems like people from Maryland tend to travel the most. However, it is also a known fact that New Yorkers spend most of their time in commuting from one part of the another in the city.</li>
+<li><em>Sleeping</em>: 
+Looks like people from Rhode Island love to sleep as they seem to spend an average of 593.1 minutes on this activity. Islanders tend to have a very relaxed life-style, this visualization only adds more proof to this fact that they live a very stress less life. Sadly, the people from Alaska, Nebraska and South Dakota comparatively catch on lesser sleep. Wonder what’s keeping them up in the night!</li>
+<li><em>Religion</em>: 
+Two words: The South. It comes as no surprise that people from the southern regions of the United States are involved in religious activities. Arkansas, Mississippi, Alabama, North Carolina, South Carolina, Texas, Louisiana and Tennessee spend a good 17-24 minutes on paying respect and praying to the Lord.</li>
+<li><em>Leisure</em>: 
+Industrious Utah residents are reported to spend very little time in leisure activities daily. Contrasting behaviour is observed from the people of West Virginia, where people spend 364.2 minutes on leisure activities like socializing, relaxing, playing games, watching TV, etc.</li>
+<li><em>Sports</em>: 
+The tiny town Vermont is a big cradle of Olympians that is home to big sportsmen namely Harry Blanchard, Jimmy Cochran, Paul Hackett, Billy Kidd and Ross Powers.</li>
+<li><em>House-hold work</em>:
+From the observation made, it looks like Alaskans are neat-freaks because they spend 82.5 minutes on an average daily on house-hold activities. On the other hand, residents of Wyoming barely spare 20 minutes on maintaining a neater house.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>NOTE</strong>: It is curious the plot of time spent(minutes) VS population% has the highest 0 value under each category of activity. The ‘0’ value indicates that people spent 0 minutes in doing that particular activity. ATUS uses the convention of blanking improper data to '0' which could increase the proportion of population that shows up with no time spent on activities.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Hard-workers-by-choice-?">Hard workers by choice ?<a class="anchor-link" href="#Hard-workers-by-choice-?">&#182;</a></h3><p>People in some states like South Dakota seem to work significantly longer than others. Let us dive deeper to check for plausible causal factors. The chart below shows the gender distribution of respondents from the top working states namely South Dakota, New Mexico, Nebraska, Utah, Tennessee, Oregon, Alaska, Idaho, Louisiana and Georgia residents.</p>
+
 </div>
 </div>
 </div>
@@ -13645,14 +13688,100 @@ div#notebook {
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reason-for-big-difference-between-male-and-female-in-Alaska:">Reason for big difference between male and female in Alaska:<a class="anchor-link" href="#Reason-for-big-difference-between-male-and-female-in-Alaska:">&#182;</a></h2><p><em>"Almost certainly the biggest factor — we have a higher percentage of oil and gas employment than other states do, and then that industry is the highest-paid in Alaska, and … the percentages are high for males," said Dan Robinson, chief of research and analysis at the Alaska Department of Labor and Workforce Development.</em></p>
+<p>Women in general seem to work lower hours than men in most of the states. This might be attributed to the wage inequality faced by women. From the latest study from the Institute for Women’s Policy Research noted that the 80 cents on the dollar comparative wage figure usually cited is actually an overestimation for many women. In many segments of the population, women earn just 49 cents on a white man’s dollar. This pay disparity might be a reason for the lower hours women work. Also women typically still face greated commitments at home (childcare etc.) which could also lead to the trend of lower hours worked.</p>
+<p>Alaska seems to be an extreme outlier in terms of gender disparity. This can be explained from the high percentage of jobs in oil and gas industry in Alaska which is predominantly male worker focused. Even experts opine so [3].</p>
+<p><em>"Almost certainly the biggest factor — we have a higher percentage of oil and gas employment than other states do, and then that industry is the highest-paid in Alaska, and … the percentages are high for males," said Dan Robinson, chief of research and analysis at the Alaska Department of Labor and Workforce Development.</em></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-does-presence-of-spouse-or-unmarried-partner-in-the-household-affect-daily-activities?">How does presence of spouse or unmarried partner in the household affect daily activities?<a class="anchor-link" href="#How-does-presence-of-spouse-or-unmarried-partner-in-the-household-affect-daily-activities?">&#182;</a></h2><h3 id="Comparison-may-be-obvious-but-the-differences-can-be-interesting"><em>Comparison may be obvious but the differences can be interesting</em><a class="anchor-link" href="#Comparison-may-be-obvious-but-the-differences-can-be-interesting">&#182;</a></h3>
+<p>We do not see much correlation with hours worked with the gender distribution. Intuition says that hours worked will rise inversely to the hourly wages. Let us see if this is really the case. The chart below shows the average hourly wage of each state.</p>
+
+</div>
+</div>
+</div>
+
+  
+
+  <div class="nbinteract-hide_in
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
+<span class="n">respond</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/sarvaniputta/nbinteract_tutorial/master/atusresp_2017.dat&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;TUCASEID&#39;</span><span class="p">,</span> <span class="s1">&#39;TRERNHLY&#39;</span><span class="p">])</span>
+<span class="n">wage_merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">merged</span><span class="p">,</span> <span class="n">respond</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;TUCASEID&#39;</span> <span class="p">)</span>  <span class="c1"># merging datasets on case ID</span>
+<span class="n">new_wage_merged</span><span class="o">=</span> <span class="n">wage_merged</span><span class="p">[</span><span class="n">wage_merged</span><span class="o">.</span><span class="n">TRERNHLY</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> 
+<span class="n">salary_per_hr</span><span class="o">=</span> <span class="n">new_wage_merged</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;GESTFIPS&#39;</span><span class="p">)[</span><span class="s1">&#39;TRERNHLY&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">/</span><span class="mi">100</span>
+
+<span class="n">cscale</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">ColorScale</span><span class="p">(</span><span class="n">scheme</span> <span class="o">=</span> <span class="s1">&#39;Blues&#39;</span><span class="p">)</span>
+                       <span class="c1"># reverse the colorscale or Hawaii is not visible</span>
+                     
+<span class="n">map_tt</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;State&#39;</span><span class="p">,</span> <span class="s1">&#39;Hourly Wage ($)&#39;</span><span class="p">],</span> <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">])</span>
+<span class="n">sc_geo</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">AlbersUSA</span><span class="p">()</span>
+<span class="n">states_map</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">salary_per_hr</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(),</span> 
+                     <span class="n">map_data</span><span class="o">=</span><span class="n">bq</span><span class="o">.</span><span class="n">topo_load</span><span class="p">(</span><span class="s1">&#39;map_data/USStatesMap.json&#39;</span><span class="p">),</span>
+                    <span class="n">scales</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span><span class="n">sc_geo</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">cscale</span><span class="p">},</span> 
+                   <span class="n">tooltip</span> <span class="o">=</span> <span class="n">map_tt</span><span class="p">)</span>
+
+<span class="n">cax</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">ColorAxis</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">cscale</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Wage ($)&#39;</span><span class="p">,)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">marks</span><span class="o">=</span><span class="p">[</span><span class="n">states_map</span><span class="p">],</span><span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">cax</span><span class="p">],</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Average hourly wage&#39;</span><span class="p">,</span>
+                <span class="n">layout</span><span class="o">=</span><span class="n">Layout</span><span class="p">(</span><span class="n">min_width</span><span class="o">=</span><span class="s1">&#39;800px&#39;</span><span class="p">,</span> <span class="n">min_height</span><span class="o">=</span><span class="s1">&#39;800px&#39;</span><span class="p">),</span>
+                <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">},</span>
+                <span class="n">title_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;font-size&#39;</span><span class="p">:</span> <span class="s1">&#39;20px&#39;</span><span class="p">,</span> <span class="s1">&#39;text-transform&#39;</span><span class="p">:</span> <span class="s1">&#39;uppercase&#39;</span><span class="p">,</span>
+                               <span class="s1">&#39;font-weight&#39;</span><span class="p">:</span> <span class="s1">&#39;700&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#13294a&#39;</span><span class="p">},)</span>
+<span class="n">fig_map</span><span class="o">.</span><span class="n">fig_margin</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;bottom&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="n">fig_map</span><span class="o">.</span><span class="n">aspect_ratio</span> <span class="o">=</span> <span class="mi">1920</span><span class="o">/</span><span class="mi">1080</span>
+               
+<span class="n">fig</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This chart explains South Dakota's position in working hours more clearly. The state has the third-lowest average wage for employed people in the country behind only Arkansas and Mississippi [2]. Roughly 21 percent of employed South Dakota residents, about 87,000 people, make under \$30,000 a year; 41 percent of employed South Dakota residents, about 169,400 people, make under \\$35,000 a year, and 71 percent of employed South Dakota residents, about 292,000 people, make under \$40,000 a year. Despite attempts to lure new employers and improve pay for workers, the state has made little progress over the past few decades. After languishing near the bottom for years, the state had the lowest average pay in the nation in 2008 and has moved up only two spots since then. This could be the reason why the residents of South Dakota have to put in extra hours to make ends meet [4]. However, correlation is not causation. To this effect, it is an interesting question to see Mississipi rank lower in hours worked given the lower hourly wage there.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Stay-single-to-have-more-leisure">Stay single to have more leisure<a class="anchor-link" href="#Stay-single-to-have-more-leisure">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>“Behind every successful man, there is a woman”. We put this oft quoted maxim to the test. Based on the presumption, we came up with an idea to visually observe if relationships really bring about a change in one’s life. From the chart below,it is evident that people tend to spend more time working not only at the office but also at home! Man, that must be very tiring. Single people also tend to sleep in longer and have more time for leisure.</p>
+
 </div>
 </div>
 </div>
@@ -13733,6 +13862,31 @@ div#notebook {
 </div>
 
   </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On second thought, a possible confounding factor for this analysis is that single respondents are typically younger and have a different lifestyle compared to older respondents in a relationship. A longitudinal study across ages would be necessary to obtain more insights into this extremely interesting question.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We have considered some questions on how Americans spend their time. While most of the observations are interesting, deeper dives are necessary to understand causal factors. As they say "correlation is not causation". On the other hand, if you are looking to relocate, know that there are some places more suited to your lifestyle than others.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Citations</p>
+<p>[1] American Time Use Survey — 2017 Microdata Files <a href="https://www.bls.gov/tus/datafiles_2017.htm">https://www.bls.gov/tus/datafiles_2017.htm</a></p>
+<p>[2] Current Population Survey (CPS) <a href="https://www.census.gov/programs-surveys/cps/data-detail.html">https://www.census.gov/programs-surveys/cps/data-detail.html</a></p>
+<p>[3] <a href="https://www.adn.com/business-economy/2017/02/27/alaska-has-one-of-nations-widest-wage-gaps-between-men-and-women/">https://www.adn.com/business-economy/2017/02/27/alaska-has-one-of-nations-widest-wage-gaps-between-men-and-women/</a></p>
+<p>[4] <a href="https://www.argusleader.com/story/news/2019/01/28/jobs-abound-but-low-wages-hamper-south-dakota-workforce/2699405002/">https://www.argusleader.com/story/news/2019/01/28/jobs-abound-but-low-wages-hamper-south-dakota-workforce/2699405002/</a></p>
+
+</div>
+</div>
+</div>
 
 
 
